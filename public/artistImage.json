@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/public/assets/artist_image/arijitP.jpeg",
+    "name": "Arijit Signh",
+    "time": "2, 'days'"
+  },
+  {
+    "image": "/public/assets/artist_image/atifp.jpg",
+    "name": "Atif Aslam",
+    "time": "1, 'days'"
+  },
+  {
+    "image": "/public/assets/artist_image/ArRahmanP.jpg",
+    "name": "AR Rahman",
+    "time": "4, 'days'"
+  },
+  {
+    "image": "/public/assets/artist_image/armaanMalikP.jpg",
+    "name": "Armaan Malik",
+    "time": "3, 'days'"
+  }
+]
