@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import userDefaultImg from "../../public/assets/images/user.png";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
@@ -88,9 +88,9 @@ const Navbar = () => {
                 <img src={user.photoURL} alt="" className="rounded-full" />
               </div>
             </label>
-            <a className="btn btn-primary" onClick={handleLogOut}>
+            <button className="btn btn-primary" onClick={handleLogOut}>
               LogOut
-            </a>
+            </button>
           </>
         ) : (
           <>
@@ -99,7 +99,9 @@ const Navbar = () => {
                 <img src={userDefaultImg} alt="" className="rounded-full" />
               </div>
             </label>
-            <a className="btn">Login</a>
+            <Link className="btn btn-primary" to="/login">
+              Login
+            </Link>
           </>
         )}
       </div>
