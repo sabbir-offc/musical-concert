@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/ysh6t8r/1.jpg",
+    "title": "Music Concert 1",
+    "details": "Details about Music Concert 1. Lorem ipsum...",
+    "concert_price": 750,
+    "artist_id": 1
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/dWZTX1L/2.jpg",
+    "title": "Music Concert 2",
+    "details": "Details about Music Concert 2. Lorem ipsum...",
+    "concert_price": 600,
+    "artist_id": 2
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/xsfq75m/3.jpg",
+    "title": "Music Concert 3",
+    "details": "Details about Music Concert 3. Lorem ipsum...",
+    "concert_price": 800,
+    "artist_id": 3
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/Yp1wG4k/4.jpg",
+    "title": "Music Concert 4",
+    "details": "Details about Music Concert 4. Lorem ipsum...",
+    "concert_price": 550,
+    "artist_id": 4
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/Pr7NnMm/5.jpg",
+    "title": "Music Concert 5",
+    "details": "Details about Music Concert 5. Lorem ipsum...",
+    "concert_price": 900,
+    "artist_id": 1
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/cNHHwqN/6.jpg",
+    "title": "Music Concert 6",
+    "details": "Details about Music Concert 6. Lorem ipsum...",
+    "concert_price": 700,
+    "artist_id": 2
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/FgpY8Dd/7.jpg",
+    "title": "Music Concert 7",
+    "details": "Details about Music Concert 7. Lorem ipsum...",
+    "concert_price": 950,
+    "artist_id": 3
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/yPQh2bQ/8.jpg",
+    "title": "Music Concert 8",
+    "details": "Details about Music Concert 8. Lorem ipsum...",
+    "concert_price": 500,
+    "artist_id": 4
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/dPW6pKV/9.jpg",
+    "title": "Music Concert 9",
+    "details": "Details about Music Concert 9. Lorem ipsum...",
+    "concert_price": 750,
+    "artist_id": 1
+  }
+]
