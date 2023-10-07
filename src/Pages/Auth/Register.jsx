@@ -1,24 +1,45 @@
+import { BiShowAlt, BiHide } from "react-icons/bi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import { useState } from "react";
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser, user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [password, setPassword] = useState(true);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
 
     const name = form.get("name");
+    const image = form.get("image");
     const email = form.get("email");
     const password = form.get("password");
-    createUser(email, password).then(() => {
-      toast.success("Registration Successfull.");
-      // navigate(location.state)
-    });
+    if (!/^(?=.*[A-Z])(?=.*[@$!%*?&]).{6,}$/.test(password)) {
+      return toast.error(
+        "You should enter a password that includes one uppercase, one lowercase and a special characters."
+      );
+    }
+
+    createUser(email, password)
+      .then(() => {
+        updateProfile(user, { displayName: name, photoURL: image })
+          .then(() => toast.success("Your Profile also updated."))
+          .catch(() => {
+            "failed to update you profile";
+          });
+
+        toast.success("Registration Successfull.");
+        // navigate(location.state)
+      })
+      .catch(() => {
+        toast.error("Account Create Failed.");
+      });
   };
   return (
     <div className="py-5">
@@ -38,6 +59,18 @@ const Register = () => {
                 required
               />
             </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                name="image"
+                placeholder="Enter Your Photo Url..."
+                className="input input-bordered"
+                required
+              />
+            </div>
 
             <div className="form-control">
               <label className="label">
@@ -51,17 +84,25 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className=" form-control">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter Your password..."
-                className="input input-bordered"
-                required
-              />
+              <div className="relative w-full">
+                <input
+                  type={password ? "password" : "text"}
+                  name="password"
+                  placeholder="Enter Your password..."
+                  className="input input-bordered w-full"
+                  required
+                />
+                <span
+                  className="absolute cursor-pointer right-2 top-3.5 text-xl"
+                  onClick={() => setPassword(!password)}
+                >
+                  {password ? <BiHide></BiHide> : <BiShowAlt></BiShowAlt>}
+                </span>
+              </div>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary" type="submit">

@@ -1,4 +1,5 @@
 import Navbar from "../../Layouts/Navbar";
+import Services from "../../Layouts/Services";
 import SimpleSlider from "../../Layouts/Slider";
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     <div className="py-5">
       <Navbar></Navbar>
       <SimpleSlider></SimpleSlider>
-      <h1>This Is Home</h1>
+      <Services></Services>
     </div>
   );
 };

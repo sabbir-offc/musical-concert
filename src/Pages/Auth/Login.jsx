@@ -1,21 +1,38 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar";
 import SocialLogin from "./SocialLogin";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { loginUser } = useAuth();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData();
+    const email = form.get("email");
+    const password = form.get("password");
+    loginUser(email, password)
+      .then(() => {
+        toast.success("Login successfull.");
+      })
+      .catch(() => {
+        toast.error("Login Failed, Email or Password doesn't match");
+      });
+  };
   return (
     <div className="py-5">
       <Navbar></Navbar>
       <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center h-fit  md:h-register">
         <div className="card flex-shrink-0 py-5 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
-                placeholder="email"
+                placeholder="Email..."
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -26,7 +43,8 @@ const Login = () => {
               </label>
               <input
                 type="password"
-                placeholder="password"
+                placeholder="Password"
+                name="password"
                 className="input input-bordered"
                 required
               />

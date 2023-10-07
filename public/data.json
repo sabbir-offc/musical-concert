@@ -2,73 +2,73 @@
   {
     "id": 1,
     "image": "https://i.ibb.co/ysh6t8r/1.jpg",
-    "title": "Music Concert 1",
-    "details": "Details about Music Concert 1. Lorem ipsum...",
-    "concert_price": 750,
+    "title": "Summer Music Festival",
+    "details": "Join us for an unforgettable night of music and fun at our Summer Music Festival. Get ready to dance the night away with your favorite artists and enjoy the best musical experience of the season. This event will feature a star-studded lineup of artists from various genres, including rock, pop, jazz, and hip-hop. Whether you're a music enthusiast or just looking for a great time, our Summer Music Festival is the place to be. Don't miss out on this epic night of music, food, and fun!",
+    "concert_price": 768,
     "artist_id": 1
   },
   {
     "id": 2,
     "image": "https://i.ibb.co/dWZTX1L/2.jpg",
-    "title": "Music Concert 2",
-    "details": "Details about Music Concert 2. Lorem ipsum...",
-    "concert_price": 600,
+    "title": "Rock Classics Night",
+    "details": "Experience the timeless classics of rock music like never before. Our Rock Classics Night features legendary rock bands that will take you on a journey through rock 'n' roll history. Get ready to headbang and sing along to iconic rock anthems that have stood the test of time. From electrifying guitar solos to powerful vocals, this night will showcase the best of rock music. Whether you're a die-hard rock fan or just looking to relive the glory days of rock 'n' roll, this event is a must-attend!",
+    "concert_price": 799,
     "artist_id": 2
   },
   {
     "id": 3,
     "image": "https://i.ibb.co/xsfq75m/3.jpg",
-    "title": "Music Concert 3",
-    "details": "Details about Music Concert 3. Lorem ipsum...",
-    "concert_price": 800,
+    "title": "Jazz Fusion Extravaganza",
+    "details": "Immerse yourself in the soulful melodies of jazz fusion at our Jazz Fusion Extravaganza. Renowned jazz musicians will create a mesmerizing atmosphere that you won't want to miss. From smooth saxophone tunes to intricate piano compositions, this event will showcase the versatility and creativity of jazz fusion. Whether you're a jazz aficionado or new to the genre, you'll be captivated by the artistry on display. Join us for a night of musical exploration and pure jazz bliss!",
+    "concert_price": 743,
     "artist_id": 3
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/Yp1wG4k/4.jpg",
-    "title": "Music Concert 4",
-    "details": "Details about Music Concert 4. Lorem ipsum...",
-    "concert_price": 550,
+    "title": "Country Music Showcase",
+    "details": "Saddle up for a night of country music at our Country Music Showcase. From twangy tunes to heartfelt ballads, this event will bring the best of country music to your ears. Grab your cowboy boots and get ready to dance along to toe-tapping country hits. Our lineup includes both up-and-coming country artists and seasoned pros, ensuring a diverse and entertaining night for all country music fans. Don't miss out on this country extravaganza!",
+    "concert_price": 586,
     "artist_id": 4
   },
   {
     "id": 5,
     "image": "https://i.ibb.co/Pr7NnMm/5.jpg",
-    "title": "Music Concert 5",
-    "details": "Details about Music Concert 5. Lorem ipsum...",
-    "concert_price": 900,
+    "title": "Pop Sensation Night",
+    "details": "Get ready to dance and sing along to the biggest pop hits of the year at our Pop Sensation Night. Top pop artists will light up the stage and keep you entertained. From chart-toppers to viral sensations, this event will showcase the best of the pop music scene. Whether you're a devoted pop music lover or just looking for a night of fun, you'll be grooving to the latest and greatest pop tunes. Join us for a pop-filled extravaganza!",
+    "concert_price": 901,
     "artist_id": 1
   },
   {
     "id": 6,
     "image": "https://i.ibb.co/cNHHwqN/6.jpg",
-    "title": "Music Concert 6",
-    "details": "Details about Music Concert 6. Lorem ipsum...",
-    "concert_price": 700,
+    "title": "Hip-Hop Extravaganza",
+    "details": "Experience the best of hip-hop culture at our Hip-Hop Extravaganza. Top rap artists will perform their chart-topping hits and showcase their lyrical prowess. From mind-blowing rhymes to sick beats, this event will immerse you in the world of hip-hop. Whether you're a dedicated hip-hop head or just curious about the genre, you won't want to miss this night of rap excellence. Join us for a hip-hop journey like no other!",
+    "concert_price": 873,
     "artist_id": 2
   },
   {
     "id": 7,
     "image": "https://i.ibb.co/FgpY8Dd/7.jpg",
-    "title": "Music Concert 7",
-    "details": "Details about Music Concert 7. Lorem ipsum...",
-    "concert_price": 950,
+    "title": "Classical Symphony Night",
+    "details": "Enjoy a night of classical music like no other at our Classical Symphony Night. Renowned orchestras and soloists will enchant you with timeless compositions. Be prepared to be transported to another world as the symphony fills the air with beautiful melodies. Whether you're a classical music aficionado or new to the genre, you'll be captivated by the grace and grandeur of classical music. Join us for a night of musical elegance and sophistication!",
+    "concert_price": 521,
     "artist_id": 3
   },
   {
     "id": 8,
     "image": "https://i.ibb.co/yPQh2bQ/8.jpg",
-    "title": "Music Concert 8",
-    "details": "Details about Music Concert 8. Lorem ipsum...",
-    "concert_price": 500,
+    "title": "Indie Music Showcase",
+    "details": "Discover the latest indie music sensations at our Indie Music Showcase. Talented indie bands and artists will perform their original songs for music enthusiasts. From indie rock to folk-inspired tunes, this event will introduce you to the freshest sounds in the indie music scene. Whether you're a dedicated indie music lover or simply looking for something new, this showcase promises a night of musical discovery and indie spirit!",
+    "concert_price": 621,
     "artist_id": 4
   },
   {
     "id": 9,
     "image": "https://i.ibb.co/dPW6pKV/9.jpg",
-    "title": "Music Concert 9",
-    "details": "Details about Music Concert 9. Lorem ipsum...",
-    "concert_price": 750,
+    "title": "Electronic Dance Party",
+    "details": "Dance the night away to electrifying beats at our Electronic Dance Party. Top DJs and electronic artists will create a high-energy atmosphere you won't forget. From pulsating bass drops to euphoric melodies, this event will immerse you in the world of electronic dance music. Whether you're a seasoned raver or new to the EDM scene, you'll be swept up in the rhythm and energy of the night. Join us for an electronic dance experience like no other!",
+    "concert_price": 690,
     "artist_id": 1
   }
 ]

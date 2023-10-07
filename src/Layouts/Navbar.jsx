@@ -85,7 +85,11 @@ const Navbar = () => {
           <>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={user.photoURL} alt="" className="rounded-full" />
+                <img
+                  src={user.photoURL}
+                  alt={`image of ${user.displayName}`}
+                  className="rounded-full"
+                />
               </div>
             </label>
             <button className="btn btn-primary" onClick={handleLogOut}>
