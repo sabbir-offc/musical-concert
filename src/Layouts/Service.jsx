@@ -7,7 +7,7 @@ const Service = ({ service }) => {
   useEffect(() => {
     AOS.init();
   }, []);
-  const { id, image, title, details, concert_price } = service;
+  const { image, title, details, concert_price } = service;
   return (
     <div
       data-aos="fade-down-right"

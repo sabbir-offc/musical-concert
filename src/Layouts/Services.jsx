@@ -1,35 +1,31 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 import Service from "./Service";
 
-const Services = () => {
+const Services = ({ services }) => {
   const [dataLength, setDataLength] = useState(4);
-  const [services, setServices] = useState(null);
-  useEffect(() => {
-    fetch("/public/data.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
 
+  const [artists, setArtists] = useState(null);
+  useEffect(() => {
+    fetch("/public/artist.json")
+      .then((res) => res.json())
+      .then((data) => setArtists(data));
+  }, []);
+  console.log(artists);
   return (
     <div>
       <div className="w-full bg-white mt-10 text-center">
         <ul className="flex gap-7 items-center justify-center">
-          <li className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500">
-            <Link>All</Link>
-          </li>
-          <li className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500">
-            <Link>Arijit Singh</Link>
-          </li>
-          <li className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500">
-            <Link>Atif Aslam</Link>
-          </li>
-          <li className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500">
-            <Link>AR Rahman</Link>
-          </li>
-          <li className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500">
-            <Link>Armaan Malik</Link>
-          </li>
+          {artists?.map((artist) => (
+            <li
+              key={artist.artist_id}
+              className="text-xl bg-gray-600 px-6 py-3 rounded text-white font-semibold hover:bg-red-400 hover:duration-500"
+            >
+              <Link to={`/artist/${artist.artist_id}`}>{artist.name}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className=" flex flex-col items-center">
@@ -49,5 +45,7 @@ const Services = () => {
     </div>
   );
 };
-
+Services.propTypes = {
+  services: PropTypes.array,
+};
 export default Services;

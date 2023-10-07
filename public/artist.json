@@ -1,4 +1,5 @@
 [
+  { "artist_id": 0, "name": "All" },
   { "artist_id": 1, "name": "Arijit Singh" },
   { "artist_id": 2, "name": "Atif Aslam" },
   { "artist_id": 3, "name": "Armaan Malik" },
