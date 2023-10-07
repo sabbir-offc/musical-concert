@@ -9,8 +9,7 @@ import { useState } from "react";
 
 const Register = () => {
   const { createUser, user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+
   const [password, setPassword] = useState(true);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -59,18 +58,6 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Photo URL</span>
-              </label>
-              <input
-                type="text"
-                name="image"
-                placeholder="Enter Your Photo Url..."
-                className="input input-bordered"
-                required
-              />
-            </div>
 
             <div className="form-control">
               <label className="label">
@@ -80,6 +67,18 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Enter Your Email..."
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                name="image"
+                placeholder="Enter Your Photo Url..."
                 className="input input-bordered"
                 required
               />
@@ -119,7 +118,7 @@ const Register = () => {
           <SocialLogin></SocialLogin>
         </div>
         <div>
-          <img src="../../../public/assets/images/register.jpg" alt="" />
+          <img src="/assets/images/register.jpg" alt="" />
         </div>
       </div>
     </div>

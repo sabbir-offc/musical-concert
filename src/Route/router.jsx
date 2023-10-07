@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import Artist from "../Layouts/Artist";
+import EventDetails from "../Pages/EventDetails/EventDetails";
+import PrivateRoutes from "./PrivateRoutes";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/public/data.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/login",
@@ -25,7 +27,16 @@ const router = createBrowserRouter([
       {
         path: "/artist/:id",
         element: <Artist></Artist>,
-        loader: () => fetch("/public/data.json"),
+        loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/events/:id",
+        element: (
+          <PrivateRoutes>
+            <EventDetails></EventDetails>
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("/data.json"),
       },
     ],
   },

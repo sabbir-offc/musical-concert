@@ -1,22 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const { loginUser } = useAuth();
   const handleLogin = (e) => {
     e.preventDefault();
-    const form = new FormData();
+    const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
     loginUser(email, password)
       .then(() => {
         toast.success("Login successfull.");
+        navigate(location.state ? location.state : "/");
       })
-      .catch(() => {
+      .catch((err) => {
         toast.error("Login Failed, Email or Password doesn't match");
+        console.log(err);
       });
   };
   return (
@@ -67,7 +72,7 @@ const Login = () => {
           <SocialLogin></SocialLogin>
         </div>
         <div>
-          <img src="../../../public/assets/images/login.jpg" alt="" />
+          <img src="/assets/images/login.jpg" alt="" />
         </div>
       </div>
     </div>

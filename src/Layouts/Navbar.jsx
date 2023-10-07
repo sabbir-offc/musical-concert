@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import userDefaultImg from "../../public/assets/images/user.png";
+import userDefaultImg from "/assets/images/user.png";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
 
@@ -75,7 +75,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <img src="../../public/assets/images/logo.png" alt="" />
+        <img src="/assets/images/logo.png" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-3">{navLinks}</ul>

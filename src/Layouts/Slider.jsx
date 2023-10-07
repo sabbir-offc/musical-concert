@@ -19,7 +19,7 @@ const MyCarousel = () => {
         <div className="cursor-pointer hero bg-arijit h-[70vh]">
           <div className="hero-content flex flex-col bg-gray-700 bg-opacity-80 h-full">
             <img
-              src="../../public/assets/artist_image/arijitP.jpeg"
+              src="/assets/artist_image/arijitP.jpeg"
               alt=""
               className="w-20 h-20 rounded-full"
             />
@@ -32,7 +32,7 @@ const MyCarousel = () => {
         <div className="cursor-pointer hero bg-atif h-[70vh]">
           <div className="hero-content flex flex-col bg-gray-700 bg-opacity-80 h-full">
             <img
-              src="../../public/assets/artist_image/atifp.jpg"
+              src="/assets/artist_image/atifp.jpg"
               className="w-20 h-20 rounded-full"
               alt=""
             />
@@ -45,7 +45,7 @@ const MyCarousel = () => {
         <div className="cursor-pointer hero bg-ArRahman h-[70vh]">
           <div className="hero-content flex flex-col bg-gray-700 bg-opacity-80 h-full">
             <img
-              src="../../public/assets/artist_image/ArRahmanP.jpg"
+              src="/assets/artist_image/ArRahmanP.jpg"
               className="w-20 h-20 rounded-full"
               alt=""
             />
@@ -58,7 +58,7 @@ const MyCarousel = () => {
         <div className="cursor-pointer hero bg-armaan h-[70vh]">
           <div className="hero-content flex flex-col bg-gray-700 bg-opacity-80 h-full">
             <img
-              src="../../public/assets/artist_image/armaanMalikP.jpg"
+              src="/assets/artist_image/armaanMalikP.jpg"
               alt=""
               className="w-20 h-20 rounded-full"
             />
