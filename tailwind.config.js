@@ -16,7 +16,7 @@ export default {
         'armaan': "url('/assets/artist_image/armaanMalik.jpg')",
       },
       spacing: {
-        'register': 'calc(100vh - 150px)',
+        'register': 'calc(100vh - 200px)',
       }
     },
   },

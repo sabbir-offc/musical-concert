@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
   const navLinks = (
     <>
       <li className="text-lg">
@@ -15,10 +16,14 @@ const Navbar = () => {
       <li className="text-lg">
         <NavLink to="/contact">Contact US</NavLink>
       </li>
+      {user && (
+        <li className="text-lg">
+          <NavLink to="/profile">Profile</NavLink>
+        </li>
+      )}
     </>
   );
 
-  const { user, logOut } = useAuth();
   const handleLogOut = () => {
     logOut()
       .then(() => {

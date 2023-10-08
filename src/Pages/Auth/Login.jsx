@@ -27,7 +27,7 @@ const Login = () => {
   return (
     <div className="py-5">
       <Navbar></Navbar>
-      <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center h-fit  md:h-register">
+      <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center">
         <div className="card flex-shrink-0 py-5 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">

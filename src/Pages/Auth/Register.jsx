@@ -1,5 +1,5 @@
 import { BiShowAlt, BiHide } from "react-icons/bi";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const Register = () => {
   const { createUser, user } = useAuth();
-
+  const navigate = useNavigate();
   const [password, setPassword] = useState(true);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ const Register = () => {
           });
 
         toast.success("Registration Successfull.");
-        // navigate(location.state)
+        navigate("/");
       })
       .catch(() => {
         toast.error("Account Create Failed.");
@@ -43,7 +43,7 @@ const Register = () => {
   return (
     <div className="py-5">
       <Navbar></Navbar>
-      <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center h-register">
+      <div className="flex mt-6 flex-col-reverse md:flex-row w-full items-center justify-center ">
         <div className="card py-5 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">

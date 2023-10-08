@@ -7,10 +7,13 @@ import Artist from "../Layouts/Artist";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import EventSubmit from "../Pages/EventSubmit/EventSubmit";
+import Profile from "../Pages/Profile/Profile";
+import Error from "../Pages/Error/Error";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -44,6 +47,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <EventSubmit></EventSubmit>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoutes>
+            <Profile></Profile>
           </PrivateRoutes>
         ),
       },
