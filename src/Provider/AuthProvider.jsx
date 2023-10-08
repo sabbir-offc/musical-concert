@@ -12,34 +12,40 @@ import auth from "../Firebase/Firebase.config";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
   const googleProvider = new GoogleAuthProvider();
 
   const googleSign = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const loginUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       return unSubscribe();
     };
   }, []);
-  const authInfo = { googleSign, user, logOut, createUser, loginUser };
+  const authInfo = { googleSign, user, loading, logOut, createUser, loginUser };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

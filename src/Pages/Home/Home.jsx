@@ -5,6 +5,7 @@ import SimpleSlider from "../../Layouts/Slider";
 import { useEffect, useState } from "react";
 import Service from "../../Layouts/Service";
 import Sponsor from "../../Layouts/Sponsor";
+import CreateEvent from "../../Layouts/CreateEvent";
 
 const Home = () => {
   const services = useLoaderData();
@@ -83,6 +84,7 @@ const Home = () => {
         </div>
       </div>
       <Sponsor></Sponsor>
+      <CreateEvent></CreateEvent>
     </div>
   );
 };

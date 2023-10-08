@@ -52,6 +52,7 @@ const Sponsor = () => {
             </h2>
           </div>
         </Slider>
+        <button className="btn btn-primary mt-8">Become A Sponsor</button>
       </div>
     </div>
   );

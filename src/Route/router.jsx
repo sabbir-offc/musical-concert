@@ -6,6 +6,7 @@ import Register from "../Pages/Auth/Register";
 import Artist from "../Layouts/Artist";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import EventSubmit from "../Pages/EventSubmit/EventSubmit";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/event-submit",
+        element: (
+          <PrivateRoutes>
+            <EventSubmit></EventSubmit>
+          </PrivateRoutes>
+        ),
       },
     ],
   },

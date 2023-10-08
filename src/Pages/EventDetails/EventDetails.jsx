@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar";
 import RightSiderBar from "../../Layouts/RightSideBar";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -16,6 +17,9 @@ const EventDetails = () => {
           <img src={image} className="w-full rounded-md" />
           <h1 className="text-2xl md:text-4xl font-bold mt-4">{title}</h1>
           <p className="text-gray-500 font-medium mt-3 text-base">{details}</p>
+          <button className="btn btn-primary my-5">
+            Get your Ticket <AiOutlineArrowRight></AiOutlineArrowRight>
+          </button>
         </div>
         <RightSiderBar></RightSiderBar>
       </div>
