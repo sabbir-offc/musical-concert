@@ -1,5 +1,6 @@
 import toast from "react-hot-toast";
 import Navbar from "../../Layouts/Navbar";
+import { useEffect } from "react";
 
 const EventSubmit = () => {
   const handleSubmit = (e) => {
@@ -14,6 +15,9 @@ const EventSubmit = () => {
     );
     e.target.reset();
   };
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div>
       <Navbar></Navbar>

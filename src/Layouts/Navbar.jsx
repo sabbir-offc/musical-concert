@@ -13,13 +13,16 @@ const Navbar = () => {
       <li className="text-lg">
         <NavLink to="/about">About</NavLink>
       </li>
-      <li className="text-lg">
-        <NavLink to="/contact">Contact US</NavLink>
-      </li>
+
       {user && (
-        <li className="text-lg">
-          <NavLink to="/profile">Profile</NavLink>
-        </li>
+        <>
+          <li className="text-lg">
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+          <li className="text-lg">
+            <NavLink to="/cart">Cart</NavLink>
+          </li>
+        </>
       )}
     </>
   );
@@ -88,18 +91,24 @@ const Navbar = () => {
       <div className="navbar-end space-x-2">
         {user ? (
           <>
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img
-                  src={user.photoURL}
-                  alt={`image of ${user.displayName}`}
-                  className="rounded-full"
-                />
-              </div>
-            </label>
-            <button className="btn btn-primary" onClick={handleLogOut}>
-              LogOut
-            </button>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <p>{user?.displayName} </p>
+                </li>
+                <li>
+                  <button onClick={handleLogOut}>Logout</button>
+                </li>
+              </ul>
+            </div>
           </>
         ) : (
           <>

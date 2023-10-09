@@ -20,14 +20,14 @@ const Login = () => {
         navigate(location.state ? location.state : "/");
       })
       .catch((err) => {
-        toast.error("Login Failed, Email or Password doesn't match");
-        console.log(err);
+        toast.error(`Login Failed,${err.message}`);
+        // console.log(err.message);
       });
   };
   return (
     <div className="py-5">
       <Navbar></Navbar>
-      <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center">
+      <div className="flex h-screen flex-col-reverse md:flex-row w-full items-center justify-center">
         <div className="card flex-shrink-0 py-5 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
@@ -53,11 +53,6 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>

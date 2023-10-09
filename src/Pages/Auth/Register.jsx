@@ -4,11 +4,11 @@ import Navbar from "../../Layouts/Navbar";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
-import { updateProfile } from "firebase/auth";
+// import { updateProfile } from "firebase/auth";
 import { useState } from "react";
 
 const Register = () => {
-  const { createUser, user } = useAuth();
+  const { createUser, updateProfileInfo } = useAuth();
   const navigate = useNavigate();
   const [password, setPassword] = useState(true);
   const handleRegister = (e) => {
@@ -27,12 +27,14 @@ const Register = () => {
 
     createUser(email, password)
       .then(() => {
-        updateProfile(user, { displayName: name, photoURL: image })
-          .then(() => toast.success("Your Profile also updated."))
+        updateProfileInfo(name, image)
+          .then(() => {
+            toast.success("Your Profile also updated.");
+            window.location.reload();
+          })
           .catch(() => {
             "failed to update you profile";
           });
-
         toast.success("Registration Successfull.");
         navigate("/");
       })

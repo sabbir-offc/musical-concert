@@ -9,6 +9,8 @@ import PrivateRoutes from "./PrivateRoutes";
 import EventSubmit from "../Pages/EventSubmit/EventSubmit";
 import Profile from "../Pages/Profile/Profile";
 import Error from "../Pages/Error/Error";
+import Cart from "../Pages/Cart/Cart";
+import About from "../Pages/About/About";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/artist/:id",
@@ -55,6 +61,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Profile></Profile>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <PrivateRoutes>
+            <Cart></Cart>
           </PrivateRoutes>
         ),
       },
