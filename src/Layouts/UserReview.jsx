@@ -20,7 +20,7 @@ const UserReview = () => {
   }, []);
   console.log(reviews);
   return (
-    <div>
+    <div className="px-4">
       <h2 className="text-3xl my-5 font-semibold">
         See What People Say About Us
       </h2>
