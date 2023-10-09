@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "user": "Alice Johnson",
+    "rating": 5,
+    "image": "https://i.ibb.co/W3TFvF2/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "review": "I had an amazing experience at the recent music festival organized by this company. The performances were outstanding, and the atmosphere was electric. Can't wait for the next event!"
+  },
+  {
+    "id": 2,
+    "user": "John Smith",
+    "rating": 4,
+    "image": "https://i.ibb.co/5RHkTjV/alex-suprun-ZHv-M3-XIOHo-E-unsplash.jpg",
+    "review": "Attended a corporate conference managed by these folks, and I must say it was very well organized. The speakers were informative, and the logistics were flawless."
+  },
+  {
+    "id": 3,
+    "user": "Emily Davis",
+    "rating": 5,
+    "image": "https://i.ibb.co/W3TFvF2/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg",
+    "review": "My daughter's wedding was a dream come true, thanks to the meticulous planning of this event management team. Everything was perfect, and we couldn't be happier!"
+  },
+  {
+    "id": 4,
+    "user": "Michael Wilson",
+    "rating": 3,
+    "image": "https://i.ibb.co/5RHkTjV/alex-suprun-ZHv-M3-XIOHo-E-unsplash.jpg",
+    "review": "The concert I attended had great music, but the crowd management could have been better. It got a bit chaotic at times.lorem ipsum dolor"
+  },
+  {
+    "id": 5,
+    "user": "Sophia Clark",
+    "rating": 5,
+    "image": "https://i.ibb.co/pXbTsts/jake-nackos-IF9-TK5-Uy-KI-unsplash.jpg",
+    "review": "I love the wellness retreat organized by this company. It was a rejuvenating experience, and I felt completely relaxed. I'll definitely be back next year!"
+  }
+]

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Service from "../../Layouts/Service";
 import Sponsor from "../../Layouts/Sponsor";
 import CreateEvent from "../../Layouts/CreateEvent";
+import UserReview from "../../Layouts/UserReview";
 
 const Home = () => {
   const services = useLoaderData();
@@ -85,6 +86,7 @@ const Home = () => {
       </div>
       <Sponsor></Sponsor>
       <CreateEvent></CreateEvent>
+      <UserReview></UserReview>
     </div>
   );
 };
