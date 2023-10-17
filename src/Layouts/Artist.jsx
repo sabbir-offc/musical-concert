@@ -24,6 +24,7 @@ const Artist = () => {
               {services.map((item) => (
                 <div
                   key={item.id}
+                  data-aos="fade-left"
                   className="px-4 md:px-0 my-5 flex flex-col lg:flex-row  bg-white rounded-lg shadow"
                 >
                   <img
@@ -69,6 +70,7 @@ const Artist = () => {
               {service.map((item) => (
                 <div
                   key={item.id}
+                  data-aos="fade-left"
                   className="px-4 md:px-0 flex flex-col lg:flex-row my-5 bg-white rounded-lg shadow"
                 >
                   <img
